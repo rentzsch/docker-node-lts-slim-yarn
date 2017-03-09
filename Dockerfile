@@ -7,4 +7,5 @@ RUN apt-get update && \
   apt-get update && \
   apt-get install -y yarn=0.21.3-1 && \
   apt-get remove --purge -y apt-transport-https $(apt-mark showauto) && \
+  rm /etc/apt/sources.list.d/yarn.list && \
   rm -rf /var/lib/apt/lists/*
