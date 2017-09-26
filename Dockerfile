@@ -6,6 +6,6 @@ RUN apt-get update && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
   apt-get update && \
   apt-get install -y yarn=1.1.0-1 && \
-  apt-get remove --purge -y apt-transport-https $(apt-mark showauto) && \
+  apt-get remove --purge -y apt-transport-https && \
   rm /etc/apt/sources.list.d/yarn.list && \
   rm -rf /var/lib/apt/lists/*
